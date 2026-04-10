@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+    <children>
+
+        <StackPane fx:id="areaContenido" layoutX="152.0" layoutY="10.0" prefHeight="380.0" prefWidth="438.0">
+            <children>
+                <VBox alignment="CENTER" spacing="20.0">
+                    <children>
+                        <ImageView fitHeight="120.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@imagenes/logoFractalia.png" />
+                            </image>
+                        </ImageView>
+
+                        <Label text="Bienvenido a Fractalia DW Analytics" textAlignment="CENTER" textFill="#1a1c27" wrapText="true">
+                            <font>
+                                <Font name="Montserrat Regular" size="22.0" />
+                            </font>
+                        </Label>
+
+                        <Label text="Seleccione un módulo del menú lateral para comenzar a visualizar los indicadores clave de rendimiento." textAlignment="CENTER" textFill="#757575" wrapText="true">
+                            <font>
+                                <Font name="Roboto Regular" size="13.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a1c27" height="408.0" layoutX="-2.0" layoutY="-4.0" stroke="#1a1c27" strokeType="INSIDE" width="152.0" />
+
+        <Label layoutX="18.0" layoutY="25.0" text="FRACTALIA" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Montserrat Regular" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="46.0" layoutY="48.0" text="DW Analytics" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Roboto Regular" size="10.0" />
+            </font>
+        </Label>
+
+        <VBox layoutX="5.0" layoutY="80.0" prefHeight="322.0" prefWidth="142.0" spacing="5.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#mostrarFinanzas" prefHeight="70.0" prefWidth="144.0" styleClass="boton-menu" stylesheets="@css/botonesMenu.css" text="Finanzas">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#mostrarOperaciones" prefHeight="70.0" prefWidth="144.0" styleClass="boton-menu" stylesheets="@css/botonesMenu.css" text="AIOps">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#mostrarHardware" prefHeight="70.0" prefWidth="144.0" styleClass="boton-menu" stylesheets="@css/botonesMenu.css" text="Hardware">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#mostrarTendencias" prefHeight="70.0" prefWidth="144.0" styleClass="boton-menu" stylesheets="@css/botonesMenu.css" text="Ventas">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

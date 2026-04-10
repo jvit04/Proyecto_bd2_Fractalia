@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="380.0" prefWidth="438.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HardwareController">
+
+    <stylesheets>
+        <URL value="@/css/aiops_style.css" />
+    </stylesheets>
+
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" text="Top 10 Hardware Problemático" textFill="#1a1c27">
+            <font>
+                <Font name="Montserrat Bold" size="18.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="14.0" layoutY="50.0" text="Categoría de Servicio:" textFill="#1a1c27">
+            <font>
+                <Font name="Roboto Regular" size="13.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="filtroCategoria" layoutX="155.0" layoutY="45.0" prefWidth="160.0" />
+
+        <BarChart fx:id="graficoHardware" animated="false" layoutX="4.0" layoutY="85.0" prefHeight="285.0" prefWidth="430.0" title="Incidencias por Componente (Top 10)" legendVisible="false">
+            <xAxis>
+                <NumberAxis label="Volumen de Fallos" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <CategoryAxis label="Componente" side="LEFT" />
+            </yAxis>
+        </BarChart>
+    </children>
+</AnchorPane>

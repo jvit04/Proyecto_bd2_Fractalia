@@ -1,0 +1,124 @@
+/*
+   File: aiops_style.css
+   Estilos específicos para el Dashboard de AIOps de Fractalia
+   Armonizando con el tema oscuro corporativo.
+*/
+
+/* --- 1. Estilos Generales y Fuentes --- */
+.label {
+    -fx-font-family: 'Montserrat Regular';
+}
+.combobox-label {
+    -fx-font-family: 'Roboto Regular';
+}
+
+/* --- 2. Estilos del COMBO BOX (Para que se vea "bonito") --- */
+
+/* El botón principal del ComboBox */
+.combo-box {
+    -fx-background-color: white; /* Fondo blanco para contraste */
+    -fx-border-color: #1a1c27; /* Borde azul oscuro de la interfaz */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 2 5 2 5;
+    -fx-cursor: hand;
+    -fx-font-family: 'Roboto Regular';
+    -fx-font-size: 12px;
+}
+
+/* Estilo cuando pasas el mouse por encima o está enfocado */
+.combo-box:hover, .combo-box:focused {
+    -fx-border-color: #a3a4a9;
+}
+
+/* El texto dentro del ComboBox */
+.combo-box > .label {
+    -fx-text-fill: #1a1c27; /* Texto azul oscuro */
+}
+
+/* La flechita desplegable */
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+.combo-box .arrow {
+    -fx-background-color: #1a1c27; /* Color de la flechita */
+    -fx-shape: "M 0 0 h 7 l -3.5 4 z"; /* Una flecha más limpia */
+}
+
+/* --- Estilo de la LISTA DESPLEGABLE (El popup) --- */
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #e0e0e0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+/* Las celdas individuales de la lista */
+.combo-box-popup .list-cell {
+    -fx-padding: 5 10 5 10;
+    -fx-background-color: white;
+    -fx-text-fill: #1a1c27;
+}
+
+/* Efecto hover al pasar el mouse por las opciones */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #8d8e93; /* Un beige muy suave de fondo */
+}
+
+/* Estilo de la opción seleccionada actualmente en la lista */
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: #1a1c27; /* Fondo azul oscuro */
+    -fx-text-fill: white; /* Texto blanco */
+}
+
+
+/* --- 3. Estilos del BAR CHART (Colores de las barras) --- */
+
+/* Fondo del gráfico transparente */
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+/* Líneas de la cuadrícula muy sutiles */
+.chart-vertical-grid-lines, .chart-horizontal-grid-lines {
+    -fx-stroke: #e0e0e0;
+    -fx-stroke-dash-array: 3 3;
+}
+
+/* Título y etiquetas de los ejes */
+.chart-title {
+    -fx-text-fill: #1a1c27;
+    -fx-font-family: 'Montserrat Regular';
+    -fx-font-size: 14px;
+}
+.axis-label {
+    -fx-text-fill: #757575;
+    -fx-font-family: 'Roboto Regular';
+    -fx-font-size: 11px;
+}
+
+/* COLOR DE LA SERIE 0: Autómatas (AIOps) - Usaremos #53597c */
+.default-color0.chart-bar {
+    -fx-bar-fill: #353a4e;
+    -fx-background-color: -fx-bar-fill, rgba(0,0,0,0.1);
+    -fx-background-insets: 0, 1;
+}
+
+/* COLOR DE LA SERIE 1: Empleados Humanos - #8b96d1 */
+.default-color1.chart-bar {
+    -fx-bar-fill: #8b96d1;
+    -fx-background-color: -fx-bar-fill, rgba(0,0,0,0.1);
+    -fx-background-insets: 0, 1;
+}
+
+/* Las leyendas del gráfico */
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-padding: 10 0 0 0;
+}
+.chart-legend-item {
+    -fx-text-fill: #1a1c27;
+    -fx-font-family: 'Roboto Regular';
+    -fx-font-size: 12px;
+}

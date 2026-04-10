@@ -1,0 +1,20 @@
+.boton-menu {
+    -fx-background-color: #1a1c27;
+    -fx-text-fill: #F5F0E6;
+    -fx-cursor: hand;
+    -fx-font-family: Roboto;
+    -fx-font-size: 15;
+
+}
+
+.boton-menu:hover {
+    -fx-background-color: #1a1c27;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+    -fx-text-fill: #F5F0E6;
+}
+
+.boton-menu:pressed {
+    -fx-background-color: #14161c;
+    -fx-text-fill: #F5F0E6;
+
+}

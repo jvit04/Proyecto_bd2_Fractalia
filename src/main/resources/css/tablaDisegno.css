@@ -1,0 +1,53 @@
+/* 1. Fondo general de la tabla (el área vacía si no hay datos) */
+.table-view {
+    -fx-base: #F5F0E6; /* Fondo crema claro */
+    -fx-control-inner-background: #F5F0E6;
+    -fx-background-color: #F5F0E6;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+
+}
+
+
+.table-view .column-header-background {
+    -fx-background-color: #2F3E28;
+    -fx-background-radius: 5px 5px 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 35px;
+    -fx-border-color: transparent;
+
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #F5F0E6;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+}
+
+
+.table-row-cell {
+    -fx-background-color: #F5F0E6;
+    -fx-border-color: transparent;
+}
+
+
+.table-row-cell:odd {
+    -fx-background-color: #EFEBD8;
+}
+
+
+.table-row-cell:filled:hover {
+    -fx-background-color: #D3D9C9;
+}
+.table-row-cell:filled:selected {
+    -fx-background-color: #8D9B6A;
+}
+
+.table-row-cell:filled:selected .text {
+    -fx-fill: white;
+}
